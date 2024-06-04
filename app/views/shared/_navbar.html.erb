@@ -1,0 +1,17 @@
+<header>
+<nav class="navbar">
+    <div class="nav-logo"><img src="Logo original.png" width="80" height="80"></div>
+    <ul>
+        <li><%= link_to "About", about_path %></li>
+        <li><%= link_to "Sectors", sectors_path %></li>     
+        <% if climber_signed_in? %>
+            <%= link_to "New Climb", new_climb_path %>
+            <%= link_to "Profile", edit_climber_registration_path %>
+            <%= button_to "Log out", destroy_climber_session_path, method: :delete %>
+        <% else %>
+            <li><%= link_to "Login", new_climber_session_path %></li>
+            <li><%= link_to "Sign Up", new_climber_registration_path %><li>
+        <% end %> 
+    </ul>
+</nav>
+</header>

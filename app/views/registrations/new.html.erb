@@ -1,0 +1,11 @@
+<h1>Sign Up</h1>
+
+<%= form_with model: @climber, url: sign_up_path do |form| %>
+    <%= form.label :email %>
+    <%= form.text_field: email, placeholder: "victor.eun@gmail.com" %>
+    <%= form.label :password %>
+    <%= form.text_field: password, placeholder: "password" %>
+    <%= form.label :password_confirmation%>
+    <%= form.text_field: password_confirmation, placeholder: "password confirmation" %>
+    <%= form.submit "Sign Up" %>
+<% end %>
